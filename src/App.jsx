@@ -17,7 +17,7 @@ const App = () => {
   const getPokemon = async () => {
     const toArray = [];
     try {
-      const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;//uso de la pokeapi
+      const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;//uso de la pokeapi, donde el valor en llaves es el pokemon
       const res = await axios.get(url);{/*se usa axios para hacer una consulta y buscar la url que coincide con el pokemon*/}
       toArray.push(res.data);
       setPokemonType(res.data.types[0].type.name);
@@ -35,7 +35,7 @@ const App = () => {
           <input
             type="text"
             onChange={handleChange}
-            placeholder="Ingresa el Pokémon"
+            placeholder="Busca en Rotomdex"//se pide el pokemon a buscar
           />
         </label>
       </form>
@@ -55,19 +55,19 @@ const App = () => {
                   <div className="divTableCell">Altura</div>
                   <div className="divTableCell">
                     {" "}
-                    {Math.round(data.height * 3.9)}"
+                    {Math.round(data.height * 3.9)}
                   </div>
                 </div>
                 <div className="divTableRow">
                   <div className="divTableCell">Peso</div>
                   <div className="divTableCell">
                     {" "}
-                    {Math.round(data.weight / 4.3)} lbs
+                    {Math.round(data.weight / 10)} kg
                   </div>
                 </div>
                 <div className="divTableRow">
-                  <div className="divTableCell">Numero de Combate</div>
-                  <div className="divTableCell">{data.game_indices.length}</div>
+                  <div className="divTableCell">Número</div>
+                  <div className="divTableCell">{data.id}</div>
                 </div>
               </div>
             </div>
