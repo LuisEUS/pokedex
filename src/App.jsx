@@ -31,6 +31,7 @@ const App = () => {
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
+        <h1 style={{ color: 'white' }}>ROTOMDEX</h1>
         <label>
           <input
             type="text"
@@ -39,6 +40,7 @@ const App = () => {
           />
         </label>
       </form>
+        <h3>Hecho por LuisEUS</h3>
       {/* Esta parte muestra la tabla con datos del pokemon */}
       {/* primero escoge el sprite frontal del pokemon*/}
       {pokemonData.map((data) => {
