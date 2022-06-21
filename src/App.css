@@ -3,8 +3,9 @@
 }
 body {
   background-image: url(https://images3.alphacoders.com/981/thumb-1920-981784.png);
-  background-size: 150%;
+  background-size: 130%;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* tabla de datos */

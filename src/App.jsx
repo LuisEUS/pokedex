@@ -33,16 +33,16 @@ const App = () => {
       <form onSubmit={handleSubmit}>
         <h1 style={{ color: 'white' }}>ROTOMDEX</h1>
         <label>
-          <input
+          <input style={{ width:"500px" }}
             type="text"
             onChange={handleChange}
-            placeholder="Busca en Rotomdex"//se pide el pokemon a buscar
+            placeholder="¿Qué Pokémon debería buscar?"//se pide el pokemon a buscar
           />
         </label>
       </form>
-        <h3>Hecho por LuisEUS</h3>
+        <h2 style={{ color: '#001E32'}}>Hecho por LuisEUS para la materia de Frontend</h2>
       {/* Esta parte muestra la tabla con datos del pokemon */}
-      {/* primero escoge el sprite frontal del pokemon*/}
+      {/* se muestra el sprite frontal normal del pokemon*/}
       {pokemonData.map((data) => {
         return (
           <div className="container">
